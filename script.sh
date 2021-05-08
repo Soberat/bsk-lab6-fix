@@ -3,6 +3,13 @@
 
 echo -e "\033[1;38;5;118mBSK lab6 fix by Mirek Wiacek B)\033[0m"
 
+echo -e "\033[1;36m>>>>Installing dependencies...\033[0m"
+apt-get install pkg-config libnl-3-dev libnl-genl-3-dev asleap
+
+echo -e "\033[1;36m>>>>Installing OpenSSL...\033[0m"
+apt-get install libssl-dev
+apt-get install libssl1.0-dev
+
 # ensure root
 if [ "$EUID" -ne 0 ]
   then echo -e "\033[0;31mMialo byc \"sudo bash ./script.sh \" :|\033[0m"
